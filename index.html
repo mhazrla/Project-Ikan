@@ -1,55 +1,292 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
     <link rel="stylesheet" href="./assets/css/index.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href=
+  "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity=
+  "sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous">
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet" />
   </head>
-  <body>
-    <!-- Sidebar -->
-    <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse bg-white">
-      <div class="position-sticky">
-        <div class="list-group list-group-flush mx-3 mt-4">
-          <a href="#" class="list-group-item list-group-item-action py-2 ripple active rounded-pill" aria-current="true">
-            <img src="./assets/img/dashboard.png" alt="" width="21" height="21" class="d-inline-block align-text-top">
-            <i class="fas fa-tachometer-alt fa-fw me-3"></i><span>Dashboard</span>
+  <body style="background-color: #F2F4FF;">
+      <!-- Navbar -->
+      <nav id="main-navbar" class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid order-1 order-md-0">
+          <a class="navbar-brand fw-bold title" href="#">
+            <img src="./assets/img/logo.svg" alt="" width="30" height="30" class="d-inline-block align-text-top">
+            Projek<span class="fish">FISH</span>
           </a>
-          <div class="dropdown">
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-              <li><a class="dropdown-item" href="#">Aquarium 1</a></li>
-              <li><a class="dropdown-item" href="#">Aquarium 2</a></li>
-              <li><a class="dropdown-item" href="#">Aquarium 3</a></li>
-            </ul>
+          <a class="navbar-brand mx-auto d-inline-block align-item-center page fw-bold" href="#">SENSOR MONITORING</a>
+        </div>
+      </nav>
+      <!-- Navbar -->
+
+    <div class="container-fluid ">
+      <div class="row">
+        <div class="col-2 col bg-white sidebar ">
+          <!-- Sidebar start -->
+          <div class="position-sticky d-flex flex-nowrap bg-light sticky-top ">
+            <ul class="nav flex-column nav-flush flex-nowrap w-100 align-items-lg-stretch ">
+                <li class="nav-item ">
+                  <a href="/" class="nav-link list-group-item list-group-item-action py-2 ripple active rounded-pill mt-5 d-flex justify-content-md-start justify-content-sm-center" aria-current="true">
+                    <img src="./assets/img/dashboard.png" alt="" width="21" height="21" class="d-inline-block align-text-top me-2">
+                    <span class="">Dashboard</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link list-group-item list-group-item-action py-2 ripple rounded-pill mt-3" data-bs-toggle="collapse" href="#listAquarium" role="button" aria-expanded="false" aria-controls="listAquarium" style="background-color: #EEEEEF;">
+                    <img src="./assets/img/logData.png" alt="" width="21" height="21" class="d-inline-block align-text-top me-2">
+                    <span class="fw-semibold">Log Data</span>
+                    <img src="./assets/img/arrow.svg" class="arrow" alt="">
+                  </a>
+                </li>
+                <div class="collapse" id="listAquarium">
+                  <div class="card card-body border-0">
+                    <ul class="list-unstyled fw-semibold text-secondary ">
+                      <li>
+                        <a href="#tes" class="list-aquarium text-decoration-none">
+                          <img src="./assets/img/listData.svg" alt="" width="21" height="21" class="d-inline-block align-items-center">
+                          <i class="fas fa-chart-area fa-fw me-3"></i><span>Aquarium 1</span>                  
+                        </a>
+                        
+                      </li>
+                      <li class="my-2">
+                        <a href="#tes" class="list-aquarium text-decoration-none">
+                          <img src="./assets/img/listData.svg" alt="" width="21" height="21" class="d-inline-block align-items-center">
+                          <i class="fas fa-chart-area fa-fw me-3"></i><span>Aquarium 2</span>                  
+                        </a>
+                      </li>
+                      <li class="my-2">
+                        <a href="#tes" class="list-aquarium text-decoration-none">
+                          <img src="./assets/img/listData.svg" alt="" width="21" height="21" class="d-inline-block align-items-center">
+                          <i class="fas fa-chart-area fa-fw me-3"></i><span>Aquarium 3</span>                  
+                        </a>
+                      </li>
+                    </ul>    
+                  </div>
+                </div>
+              </ul>
           </div>
-          <a href="#" class="btn dropdown-toggle list-group-item list-group-item-action py-2 ripple" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-            <img src="./assets/img/logData.png" alt="" width="21" height="21" class="d-inline-block align-text-top">
-            <i class="fas fa-chart-area fa-fw me-3"></i><span>Log Data</span>
-          </a>
+          <!-- Sidebar end -->
+        </div>
+
+        <div class="col-10 ">
+          <div class="row">
+            <div class="col">
+              <div class="container">
+                <div class="row row-cols-4 d-flex my-3 mt-5">
+                  <!-- Cari Start -->
+                  <div class="col ms-5">
+                    <div class="input-group">
+                      <input class="form-control rounded-pill rounded-end" type="search" placeholder="Cari Aquarium" id="cariAquarium">
+                      <span class="input-group-append">
+                        <button class="btn border-0 ms-n5 rounded-pill rounded-start" type="button" style="background-color: #E9ECEF;">
+                          <img src="./assets/img/search.svg" alt="">
+                        </button>
+                      </span>
+                    </div>
+                  </div>
+                  <!-- Cari Ends -->
+                    
+                  <!-- Tambah start -->
+                  <div class="col ms-auto">
+                    <div class="container">
+                      <div class="row row-cols-1">
+                        <div class="input-group ">
+                          <span class="input-group-append">
+                            <button class="btn btn-outline-muted border-0  ms-ns rounded-pill" type="button" 
+                            data-bs-toggle="collapse" href="#tambahData" role="button" aria-expanded="false" aria-controls="tambahData"
+                            style="background-color: #E9ECEF; color: #333333;" data-bs-target="#tambahData">
+                            <img src="./assets/img/add.png" alt="" class="align-items-center">
+                            Tambah Aquarium
+                            </button>
+                          </span>
+                        </div>
+                        <!-- Tambah end -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="collapse tambah-data me-5 mt-3" id="tambahData" >
+                  <div class="card card-body border-0 rounded-pill float-end p-md-1 " style="background-color: #E9ECEF;">
+                    <div class="row d-flex">
+                      <div class="col-8">
+                        <input class=" form-control border-end-0 border rounded-pill rounded-pill" type="search" placeholder="Masukkan nama..." id="tambah"> 
+                      </div>
+                      <div class="col-2">
+                        <button type="button" class="btn btn-primary rounded-4 border-0" style="background-color: #2196F3;">Submit</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row ms-5 my-4">
+            <div class="col">
+                <div class="container">
+                  <h2 class="mt-3 mb-5 fw-bold" style="color: #343A40;">Aquarium 1</h2>
+                  <div class="card p-5 rounded-5 border-0"  style="background-color: #F8F9FA;" >
+                    <div class="row align-items-center">
+
+                      <div class="col mb-3">
+                        <div class="card card-aquarium rounded-5 ">
+                          <div class="card-header bg-transparent border-0">
+                            <div class="img-card-aquarium d-flex justify-content-center" style="height: 131px;">
+                              <img src="assets/img/Nitrit.svg" class="img-fluid pt-3 mx-auto" alt="Nitrit">
+                            </div>
+                          </div>
+                          <div class="card-body text-center">
+                            <h4 class="card-title mb-3">NITRIT</h4>
+                            <h4 class="text-center">110 (mg/L)</h4>
+                          </div>
+                        </div>
+                      </div>
+  
+                      <div class="col mb-3">
+                        <div class="card card-aquarium rounded-5 ">
+                          <div class="card-header bg-transparent border-0">
+                            <div class="img-card-aquarium d-flex justify-content-center" style="height: 131px;">
+                              <img src="assets/img/Nitrat.png" class="img-fluid pt-3 mx-auto" alt="Nitrat">
+                            </div>
+                          </div>
+                          <div class="card-body text-center">
+                            <h4 class="card-title mb-3">NITRAT</h4>
+                            <h4 class="text-center">110 (mg/L)</h4>
+                          </div>
+                        </div>
+                      </div>
+  
+                      <div class="col mb-3">
+                        <div class="card card-aquarium rounded-5 ">
+                          <div class="card-header bg-transparent border-0">
+                            <div class="img-card-aquarium d-flex justify-content-center" style="height: 131px;">
+                              <img src="assets/img/Amonia.png" class="img-fluid pt-3 mx-auto" alt="Amonia">
+                            </div>
+                          </div>
+                          <div class="card-body text-center">
+                            <h4 class="card-title mb-3">AMONIA</h4>
+                            <h4 class="text-center">110 (mg/L)</h4>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col mt-3">
+                        <h6 class="text-muted"><span class="fw-bold">Update time : </span>2022-06-21 13:44:41</h6>
+                      </div>
+                      <div class="col-md-4 col-lg-4 mt-3">
+                        <div class="row">
+                          <h6 class="col-10 text-muted"><span class="fw-bold">Status : </span>Kualitas air buruk </h6> 
+                          <div class="col">
+                            <span class="position-absolute p-2 bg-danger border border-light rounded-circle">
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  
+                </div>
+            </div>
+          </div>
+
+          <div class="row ms-5 my-4">
+            <div class="col">
+                <div class="container">
+                  <h2 class="mt-3 mb-5 fw-bold" style="color: #343A40;">Aquarium 2</h2>
+                  <div class="card p-5 rounded-5 border-0"  style="background-color: #F8F9FA;" >
+                    <div class="row align-items-center">
+
+                      <div class="col mb-3">
+                        <div class="card card-aquarium rounded-5 ">
+                          <div class="card-header bg-transparent border-0">
+                            <div class="img-card-aquarium d-flex justify-content-center" style="height: 131px;">
+                              <img src="assets/img/Nitrit.svg" class="img-fluid pt-3 mx-auto" alt="Nitrit">
+                            </div>
+                          </div>
+                          <div class="card-body text-center">
+                            <h4 class="card-title mb-3">NITRIT</h4>
+                            <h4 class="text-center">110 (mg/L)</h4>
+                          </div>
+                        </div>
+                      </div>
+  
+                      <div class="col mb-3">
+                        <div class="card card-aquarium rounded-5 ">
+                          <div class="card-header bg-transparent border-0">
+                            <div class="img-card-aquarium d-flex justify-content-center" style="height: 131px;">
+                              <img src="assets/img/Nitrat.png" class="img-fluid pt-3 mx-auto" alt="Nitrat">
+                            </div>
+                          </div>
+                          <div class="card-body text-center">
+                            <h4 class="card-title mb-3">NITRAT</h4>
+                            <h4 class="text-center">110 (mg/L)</h4>
+                          </div>
+                        </div>
+                      </div>
+  
+                      <div class="col mb-3">
+                        <div class="card card-aquarium rounded-5 ">
+                          <div class="card-header bg-transparent border-0">
+                            <div class="img-card-aquarium d-flex justify-content-center" style="height: 131px;">
+                              <img src="assets/img/Amonia.png" class="img-fluid pt-3 mx-auto" alt="Amonia">
+                            </div>
+                          </div>
+                          <div class="card-body text-center">
+                            <h4 class="card-title mb-3">AMONIA</h4>
+                            <h4 class="text-center">110 (mg/L)</h4>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col mt-3">
+                        <h6 class="text-muted"><span class="fw-bold">Update time : </span>2022-06-21 13:44:41</h6>
+                      </div>
+                      <div class="col-md-4 col-lg-4 mt-3">
+                        <div class="row">
+                          <h6 class="col-10 text-muted"><span class="fw-bold">Status : </span>Kualitas air baik </h6> 
+                          <div class="col">
+                            <span class="position-absolute p-2 bg-success border border-light rounded-circle">
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  
+                </div>
+            </div>
+          </div>
+
+
+
         </div>
       </div>
-    </nav>
-    <!-- Sidebar -->
-
-  <!-- Navbar -->
-  <nav id="main-navbar" class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
-    <!-- Container wrapper -->
-    <div class="container-fluid order-1 order-md-0">
-
-      <!-- Brand -->
-      <a class="navbar-brand fw-bold title" href="#">
-        <img src="./assets/img/logo.svg" alt="" width="30" height="30" class="d-inline-block align-text-top">
-        Projek<span class="fish">FISH</span>
-      </a>
-      <a class="navbar-brand mx-auto d-inline-block align-item-center page fw-bold" href="#">SENSOR MONITORING</a>
-
     </div>
-    <!-- Container wrapper -->
-  </nav>
-  <!-- Navbar -->
-  
-
+    <footer class="bg-light text-center text-lg-start">
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: #2083F4; color: #fff;">
+        © 2022 Copyright || Created by Project Mahasiswa || SV IPB
+      </div>
+      <!-- Copyright -->
+    </footer>
+  </body>
 </html>
