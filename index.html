@@ -18,6 +18,9 @@
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
       <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet" />
+
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
   </head>
   <body style="background-color: #F2F4FF;">
       <!-- Navbar -->
@@ -32,45 +35,47 @@
       </nav>
       <!-- Navbar -->
 
-    <div class="container-fluid ">
+    <div class="container-fluid container-fluid d-flex flex-column min-vh-100">
       <div class="row">
         <div class="col-2 col bg-white sidebar ">
           <!-- Sidebar start -->
-          <div class="position-sticky d-flex flex-nowrap bg-light sticky-top ">
+          <div class="position-sticky d-flex flex-nowrap bg- sticky-top ">
             <ul class="nav flex-column nav-flush flex-nowrap w-100 align-items-lg-stretch ">
                 <li class="nav-item ">
                   <a href="/" class="nav-link list-group-item list-group-item-action py-2 ripple active rounded-pill mt-5 d-flex justify-content-md-start justify-content-sm-center" aria-current="true">
-                    <img src="./assets/img/dashboard.png" alt="" width="21" height="21" class="d-inline-block align-text-top me-2">
+                    <span class="material-symbols-outlined me-2">
+                      dashboard
+                      </span>
                     <span class="">Dashboard</span>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link list-group-item list-group-item-action py-2 ripple rounded-pill mt-3" data-bs-toggle="collapse" href="#listAquarium" role="button" aria-expanded="false" aria-controls="listAquarium" style="background-color: #EEEEEF;">
-                    <img src="./assets/img/logData.png" alt="" width="21" height="21" class="d-inline-block align-text-top me-2">
+                  <a class="nav-link list-group-item list-group-item-action py-2 ripple rounded-pill mt-3 d-flex justify-content-md-start justify-content-sm-center" data-bs-toggle="collapse" href="#listAquarium" role="button" aria-expanded="false" aria-controls="listAquarium" style="background-color: #EEEEEF;">
+                    <span class="material-symbols-outlined me-2">
+                      database
+                      </span>
                     <span class="fw-semibold">Log Data</span>
-                    <img src="./assets/img/arrow.svg" class="arrow" alt="">
+                    <span class="material-symbols-outlined">
+                      expand_more
+                      </span>
                   </a>
                 </li>
                 <div class="collapse" id="listAquarium">
                   <div class="card card-body border-0">
-                    <ul class="list-unstyled fw-semibold text-secondary ">
-                      <li>
-                        <a href="#tes" class="list-aquarium text-decoration-none">
-                          <img src="./assets/img/listData.svg" alt="" width="21" height="21" class="d-inline-block align-items-center">
-                          <i class="fas fa-chart-area fa-fw me-3"></i><span>Aquarium 1</span>                  
-                        </a>
-                        
-                      </li>
-                      <li class="my-2">
-                        <a href="#tes" class="list-aquarium text-decoration-none">
-                          <img src="./assets/img/listData.svg" alt="" width="21" height="21" class="d-inline-block align-items-center">
-                          <i class="fas fa-chart-area fa-fw me-3"></i><span>Aquarium 2</span>                  
+                    <ul class=" fw-semibold text-secondary ">
+                      <li class="">
+                        <a href="logData.html" class="list-aquarium text-decoration-none ">
+                          <span class="ms-3">Aquarium 1</span>                  
                         </a>
                       </li>
                       <li class="my-2">
-                        <a href="#tes" class="list-aquarium text-decoration-none">
-                          <img src="./assets/img/listData.svg" alt="" width="21" height="21" class="d-inline-block align-items-center">
-                          <i class="fas fa-chart-area fa-fw me-3"></i><span>Aquarium 3</span>                  
+                        <a href="logData.html" class="list-aquarium text-decoration-none">
+                          <span class="ms-3">Aquarium 2</span>                  
+                        </a>
+                      </li>
+                      <li class="my-2">
+                        <a href="logData.html" class="list-aquarium text-decoration-none">
+                          <span class="ms-3">Aquarium 3</span>                  
                         </a>
                       </li>
                     </ul>    
@@ -92,7 +97,9 @@
                       <input class="form-control rounded-pill rounded-end" type="search" placeholder="Cari Aquarium" id="cariAquarium">
                       <span class="input-group-append">
                         <button class="btn border-0 ms-n5 rounded-pill rounded-start" type="button" style="background-color: #E9ECEF;">
-                          <img src="./assets/img/search.svg" alt="">
+                          <span class="material-symbols-outlined align-text-top">
+                            search
+                          </span>                        
                         </button>
                       </span>
                     </div>
@@ -108,8 +115,10 @@
                             <button class="btn btn-outline-muted border-0  ms-ns rounded-pill" type="button" 
                             data-bs-toggle="collapse" href="#tambahData" role="button" aria-expanded="false" aria-controls="tambahData"
                             style="background-color: #E9ECEF; color: #333333;" data-bs-target="#tambahData">
-                            <img src="./assets/img/add.png" alt="" class="align-items-center">
-                            Tambah Aquarium
+                            <span class="material-symbols-outlined align-text-top">
+                              add_circle
+                            </span>
+                            <span>Tambah Aquarium</span>
                             </button>
                           </span>
                         </div>
@@ -159,7 +168,7 @@
                         <div class="card card-aquarium rounded-5 ">
                           <div class="card-header bg-transparent border-0">
                             <div class="img-card-aquarium d-flex justify-content-center" style="height: 131px;">
-                              <img src="assets/img/Nitrat.png" class="img-fluid pt-3 mx-auto" alt="Nitrat">
+                              <img src="assets/img/Nitrat.svg" class="img-fluid pt-3 mx-auto" alt="Nitrat">
                             </div>
                           </div>
                           <div class="card-body text-center">
@@ -173,7 +182,7 @@
                         <div class="card card-aquarium rounded-5 ">
                           <div class="card-header bg-transparent border-0">
                             <div class="img-card-aquarium d-flex justify-content-center" style="height: 131px;">
-                              <img src="assets/img/Amonia.png" class="img-fluid pt-3 mx-auto" alt="Amonia">
+                              <img src="assets/img/Amonia.svg" class="img-fluid pt-3 mx-auto" alt="Amonia">
                             </div>
                           </div>
                           <div class="card-body text-center">
@@ -230,7 +239,7 @@
                         <div class="card card-aquarium rounded-5 ">
                           <div class="card-header bg-transparent border-0">
                             <div class="img-card-aquarium d-flex justify-content-center" style="height: 131px;">
-                              <img src="assets/img/Nitrat.png" class="img-fluid pt-3 mx-auto" alt="Nitrat">
+                              <img src="assets/img/Nitrat.svg" class="img-fluid pt-3 mx-auto" alt="Nitrat">
                             </div>
                           </div>
                           <div class="card-body text-center">
@@ -244,7 +253,7 @@
                         <div class="card card-aquarium rounded-5 ">
                           <div class="card-header bg-transparent border-0">
                             <div class="img-card-aquarium d-flex justify-content-center" style="height: 131px;">
-                              <img src="assets/img/Amonia.png" class="img-fluid pt-3 mx-auto" alt="Amonia">
+                              <img src="assets/img/Amonia.svg" class="img-fluid pt-3 mx-auto" alt="Amonia">
                             </div>
                           </div>
                           <div class="card-body text-center">
@@ -281,7 +290,7 @@
         </div>
       </div>
     </div>
-    <footer class="bg-light text-center text-lg-start">
+    <footer class="bg-light text-center text-lg-start mt-auto">
       <!-- Copyright -->
       <div class="text-center p-3" style="background-color: #2083F4; color: #fff;">
         © 2022 Copyright || Created by Project Mahasiswa || SV IPB
