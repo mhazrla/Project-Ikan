@@ -1,0 +1,152 @@
+<%- include('header'); -%> 
+
+                        <!-- Sidebar start -->
+                        <div class=" position-sticky d-flex flex-nowrap vh-100 sticky-top ">
+                            <ul class="nav flex-column nav-flush flex-nowrap w-100 align-items-lg-stretch ">
+                                <li class="nav-item ">
+                                    <a href="/" class="nav-link list-group-item list-group-item-action py-2 ripple  rounded-pill mt-5 d-flex justify-content-md-start justify-content-sm-center" aria-current="true"  style="background-color: #EEEEEF;">
+                                    <span class="material-symbols-outlined me-2">
+                                        dashboard
+                                        </span>
+                                    <span class="fw-semibold">Dashboard</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link list-group-item list-group-item-action py-2 ripple active rounded-pill mt-3 d-flex justify-content-md-start justify-content-sm-center" data-bs-toggle="collapse" href="#listAquarium" role="button" aria-expanded="false" aria-controls="listAquarium">
+                                        <span class="material-symbols-outlined me-2">
+                                            database
+                                        </span>
+                                        <span class="">Log Data</span>
+                                        <span class="material-symbols-outlined">
+                                            expand_more
+                                        </span>
+                                    </a>
+                                </li>
+                                <div class="collapse" id="listAquarium">
+                                    <div class="card card-body border-0">
+                                    <ul class=" fw-semibold text-secondary ">
+                                        <% if(data.length){
+                                            for(var i = 0; i < data.length; i++) {%>  
+                    
+                                          <li>
+                                            <a href="./<%= data[i].id %>" class="list-aquarium text-decoration-none ">
+                                              <span class="ms-3"> <%= data[i].nama %>  </span>                  
+                                            </a>
+                                          </li>
+                                            <% }%>
+                                          <% } %>
+                                    </ul>    
+                                    </div>
+                                </div>
+                                </ul>
+                            </div>
+                        <!-- Sidebar end -->
+                </div>
+
+                <div class="col-10 ">
+                    <div class="row ms-5 my-5">
+                        <div class="col">
+                            <div class="container-fluid">
+
+                                <!-- Button start -->
+                                <div class="row">
+                                    <div class="col ">
+                                        <button class="btn btn-danger mb-4 me-3 px-4 rounded-pill ">
+                                            <span class="material-symbols-outlined align-text-top">
+                                                delete
+                                            </span>
+                                            <span>Clear</span>
+                                        </button>
+            
+                                        <button class="btn btn-primary mb-4 me-4 px-4 rounded-pill  ">
+                                            <span class="material-symbols-outlined align-text-top">
+                                                file_download
+                                            </span>
+                                            <span>Download</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <!-- Button end-->
+
+                                <!-- Table start -->
+                                
+                                <table class="table table-bordered bg-white">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">No</th>
+                                            <th scope="col">Waktu</th>
+                                            <th scope="col">Nitrit</th>
+                                            <th scope="col">Nitrat</th>
+                                            <th scope="col">Amonia</th>
+                                            <th scope="col">Status</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <% if(data.length){
+                                            for(var i = 0; i < data.length; i++) {%>  
+                                        <tr>
+                                            <th scope="row"><%= (i+1) %></th>
+                                            <td><%= data[i].waktu %></td>
+                                            <td><%= data[i].nitrit %></td>
+                                            <td><%= data[i].nitrat %></td>
+                                            <td><%= data[i].amonia %></td>
+                                            <td><%= data[i].status %></td>
+                                        </tr>
+                                            <% }%>
+                                        <% } %>
+                                        
+                                    </tbody>
+                                </table>
+                                <!-- Table end -->
+
+                                <!-- Pagination start -->
+                                <nav aria-label="Page navigation">
+                                        <div class="pagination justify-content-center align-items-center container">
+                                            <ul class="row list-unstyled p-3 rounded-4 pages" style="background-color: #FFFFFF; ">
+                                                <li class="col page-item disabled">
+                                                    <a class="page-link border-0">
+                                                        <span class="material-symbols-outlined">
+                                                            arrow_back_ios
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                                <li class="col page-item active">
+                                                    <a class="page-link border-0 rounded-2" href="#">1</a>
+                                                </li>
+                                                <li class="col page-item">
+                                                <a class="page-link border-0 rounded-2" href="#">2</a>
+                                                </li>
+                                                <li class="col page-item">
+                                                    <a class="page-link border-0 rounded-2" href="#">3</a>
+                                                </li>
+                                                <li class="col page-item">
+                                                    <a class="page-link border-0 rounded-2" href="#">4</a>
+                                                </li>
+                                                <li class="col page-item">
+                                                    <a class="page-link border-0 rounded-2" href="#">5</a>
+                                                </li>
+                                                <li class="col page-item">
+                                                    <a class="page-link border-0 rounded-2" href="#">...</a>
+                                                </li>
+                                                <li class="col page-item">
+                                                    <a class="page-link border-0 rounded-2" href="#">22</a>
+                                                </li>
+                                                <li class="col page-item">
+                                                    <a class="page-link border-0">
+                                                        <span class="material-symbols-outlined">
+                                                            arrow_forward_ios
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </nav>
+                                    <!-- Pagination ends -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+<%- include('footer') %> 

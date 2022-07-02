@@ -1,0 +1,198 @@
+<%- include('header') %> 
+
+
+          <!-- Sidebar start -->
+          <div class="position-sticky d-flex flex-nowrap bg- sticky-top vh-100">
+            <ul class="nav flex-column nav-flush flex-nowrap w-100 align-items-lg-stretch ">
+                <li class="nav-item ">
+                  <a href="/" class="nav-link list-group-item list-group-item-action py-2 ripple active rounded-pill mt-5 d-flex justify-content-md-start justify-content-sm-center" aria-current="true">
+                    <span class="material-symbols-outlined me-2">
+                      dashboard
+                      </span>
+                    <span class="">Dashboard</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link list-group-item list-group-item-action py-2 ripple rounded-pill mt-3 d-flex justify-content-md-start justify-content-sm-center" data-bs-toggle="collapse" href="#listAquarium" role="button" aria-expanded="false" aria-controls="listAquarium" style="background-color: #EEEEEF;">
+                    <span class="material-symbols-outlined me-2">
+                      database
+                      </span>
+                    <span class="fw-semibold">Log Data</span>
+                    <span class="material-symbols-outlined">
+                      expand_more
+                      </span>
+                  </a>
+                </li>
+                <div class="collapse" id="listAquarium">
+                  <div class="card card-body border-0">
+                    <ul class=" fw-semibold text-secondary ">
+                      <% data.forEach(value => {  %>  
+                      <li>
+                        <a href="logData/<%= value.id %>" class="list-aquarium text-decoration-none ">
+                          <span class="ms-3"> <%= value.nama %>  </span>                  
+                        </a>
+                      </li>
+                      <% }); %>  
+                    </ul>    
+                  </div>
+                </div>
+              </ul>
+          </div>
+          <!-- Sidebar end -->
+        </div>
+
+        <div class="col-10 ">
+          <div class="row">
+            <div class="col">
+              <div class="container">
+                <div class="row row-cols-4 d-flex my-3 mt-5">
+                  <!-- Cari Start -->
+                  <div class="col ms-5">
+                    <div class="input-group">
+                      <input class="form-control rounded-pill rounded-end" type="search" placeholder="Cari Aquarium" id="cariAquarium" >
+                      <span class="input-group-append">
+                        <button class="btn border-0 ms-n5 rounded-pill rounded-start" type="button" style="background-color: #E9ECEF;">
+                          <span class="material-symbols-outlined align-text-top">
+                            search
+                          </span>                        
+                        </button>
+                      </span>
+                    </div>
+                  </div>
+                  <!-- Cari Ends -->
+                    
+                  <!-- Tambah start -->
+                  <div class="col ms-auto">
+                    <div class="container">
+                      <div class="row row-cols-1">
+                        <div class="input-group ">
+                          <span class="input-group-append">
+                            <button class="btn btn-outline-muted border-0  ms-ns rounded-pill" type="button" 
+                            data-bs-toggle="collapse" href="#tambahData" role="button" aria-expanded="false" aria-controls="tambahData"
+                            style="background-color: #E9ECEF; color: #333333;" data-bs-target="#tambahData">
+                            <span class="material-symbols-outlined align-text-top">
+                              add_circle
+                            </span>
+                            <span>Tambah Aquarium</span>
+                            </button>
+                          </span>
+                        </div>
+                        <!-- Tambah end -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <form onsubmit="return doPost(this)" method="post">
+                  <div class="collapse tambah-data me-5 mt-3" id="tambahData" >
+                    <div class="card card-body border-0 rounded-pill float-end p-md-1 " style="background-color: #E9ECEF;">
+                      <div class="row d-flex">
+                        <div class="col-8">
+                          <input class=" form-control border-end-0 border rounded-pill rounded-pill" placeholder="Masukkan nama..." name="nama"> 
+                        </div>
+                        <div class="col-2">
+                          <button type="submit" class="btn btn-primary rounded-4 border-0" style="background-color: #2196F3;">Submit</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div class="row ms-5 my-4">
+            <div class="col">
+                <div class="container">
+                  <% if(data.length){
+                        for(var i = 0; i < data.length; i++) {%>  
+                  
+                    <h2 class="mt-3 mb-5 fw-bold" style="color: #343A40;"><%= data[i].nama %></h2>
+                    <div class="card p-5 rounded-5 border-0"  style="background-color: #F8F9FA;" >
+                      <div class="row align-items-center">
+
+                        <div class="col mb-3">
+                          <div class="card card-aquarium rounded-5 ">
+                            <div class="card-header bg-transparent border-0">
+                              <div class="img-card-aquarium d-flex justify-content-center" style="height: 131px;">
+                                <img src="/static/index/img/Nitrit.svg" class="img-fluid pt-3 mx-auto" alt="Nitrit">
+                              </div>
+                            </div>
+                            <div class="card-body text-center">
+                              <h4 class="card-title mb-3">NITRIT</h4>
+                              <h4 class="text-center"><%= data[i].nitrit %> (mg/L)</h4>
+                            </div>
+                          </div>
+                        </div>
+    
+                        <div class="col mb-3">
+                          <div class="card card-aquarium rounded-5 ">
+                            <div class="card-header bg-transparent border-0">
+                              <div class="img-card-aquarium d-flex justify-content-center" style="height: 131px;">
+                                <img src="/static/index/img/Nitrat.svg" class="img-fluid pt-3 mx-auto" alt="Nitrat">
+                              </div>
+                            </div>
+                            <div class="card-body text-center">
+                              <h4 class="card-title mb-3">NITRAT</h4>
+                              <h4 class="text-center"><%= data[i].nitrat %>  (mg/L)</h4>
+                            </div>
+                          </div>
+                        </div>
+    
+                        <div class="col mb-3">
+                          <div class="card card-aquarium rounded-5 ">
+                            <div class="card-header bg-transparent border-0">
+                              <div class="img-card-aquarium d-flex justify-content-center" style="height: 131px;">
+                                <img src="/static/index/img/Amonia.svg" class="img-fluid pt-3 mx-auto" alt="Amonia">
+                              </div>
+                            </div>
+                            <div class="card-body text-center">
+                              <h4 class="card-title mb-3">AMONIA</h4>
+                              <h4 class="text-center"><%= data[i].amonia %>  (mg/L)</h4>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col mt-3">
+                          <h6 class="text-muted"><span class="fw-bold">Update time : </span><%= data[i].waktu %> </h6>
+                        </div>
+                        <div class="col-md-4 col-lg-4 mt-3">
+                          <div class="row">
+                            <h6 class="col-10 text-muted"><span class="fw-bold">Status : </span>Kualitas air buruk </h6> 
+                            <div class="col">
+                              <span class="position-absolute p-2 bg-danger border border-light rounded-circle">
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  
+                      <% }%>
+                  <% } %>
+                </div>
+            </div>
+          </div>
+
+        </div>
+<script>
+  function doPost(form){
+    $.ajax({
+      url: "/add",
+      method: "POST",
+      data: {
+        nama : form.nama.value
+      },
+      success : response => {
+        alert(response)
+        location.reload()
+      },
+      
+    });
+    return false;
+  }
+</script>
+  
+<%- include('footer') %> 
