@@ -1,0 +1,131 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+body {
+    font-family: 'Poppins';
+}
+
+.navbar .container-fluid .title{
+    font-size: 22px;
+}
+
+.navbar .fish {
+    color: #FCF300;
+}
+
+.navbar .container-fluid .page{
+    font-size: 28px;
+    color: #FCF300;
+}
+
+/* Sidebar */
+.sidebar {
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 5%), 0 2px 10px 0 rgb(0 0 0 / 5%);
+  }
+  
+  @media (max-width: 991.98px) {
+    .sidebar {
+      width: 100%;
+    }
+  }
+  .sidebar .active {
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+  }
+
+  .container .card-aquarium{
+    background-color: #64B5F6;
+    color: #fff;
+  }
+
+  .list-aquarium{
+    color: inherit;
+  }
+=======
+body {
+    font-family: 'Poppins';
+}
+
+/* Sidebar */
+.sidebar-nav ul li a {
+    font-size: 26px;
+    text-decoration: none;
+    display: block;
+    padding: 6px 10px;
+    transition: 0.5s;
+}
+.sidebar-nav ul li a:hover {
+    background-color: #eeeeee;
+    border-radius: 4px;
+}
+.sidebar-nav .offcanvas {
+    width: 220px;
+    border: none;
+}
+.sidebar-nav .offcanvas ul li a span {
+    font-size: 18px;
+    position: relative;
+    top: -4px;
+    transition: 0.5s;
+}
+.sidebar-nav .offcanvas.show ul li a:hover span {
+    padding-left: 10px;
+}
+
+/* Navbar */
+.navbar .container-fluid .title{
+    font-size: 22px;
+}
+
+.navbar  a:hover {
+    color: #eeeeee;
+}
+.navbar .navbar-brand {
+    font-size: 28px;
+    color: #FCF300;
+}
+
+
+.list-aquarium{
+    color: #fff;
+  }
+>>>>>>> cc85541 (bismillah)
+=======
+body {
+    font-family: 'Poppins';
+}
+
+.navbar .container-fluid .title{
+    font-size: 22px;
+}
+
+.navbar .fish {
+    color: #FCF300;
+}
+
+.navbar .container-fluid .page{
+    font-size: 28px;
+    color: #FCF300;
+}
+
+/* Sidebar */
+.sidebar {
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 5%), 0 2px 10px 0 rgb(0 0 0 / 5%);
+  }
+  
+  @media (max-width: 991.98px) {
+    .sidebar {
+      width: 100%;
+    }
+  }
+  .sidebar .active {
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+  }
+
+  .container .card-aquarium{
+    background-color: #64B5F6;
+    color: #fff;
+  }
+
+  .list-aquarium{
+    color: inherit;
+  }
+>>>>>>> 4c25f9b0cf3f537a076a52ef23df3aedef0b2eea
