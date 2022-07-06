@@ -28,7 +28,7 @@ $result = mysqli_query($db, $query);
     <script>"https://unpkg.com/jquery@3.3.1/dist/jquery.js"</script>
 
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
     <div class="screen-cover d-none d-xl-none"></div>
 
     <div class="sidebar-nav">
@@ -107,56 +107,39 @@ $result = mysqli_query($db, $query);
     <?php endif; ?>
     
     <section id="data">
-        <div class="container-fluid" style="height: 100%;">
-            <div class="row d-flex my-5 pt-5" style="height: 100%;">
-                <!-- Cari Start -->
-                <div class="col-4 mx-auto mt-5 pt-5 pt-md-0">
-                    <div class="input-group">
-                        <input class="form-control rounded-pill rounded-end" type="search" placeholder="Cari Aquarium" id="cariAquarium">
-                        <button class="btn border-0 ms-n5 rounded-pill rounded-start" type="button" style="background-color: #E9ECEF;">
-                            <span class="material-symbols-outlined align-text-top">
-                                search
-                            </span>                        
-                        </button>
-                    </div>
-                </div>
-                <!-- Cari Ends -->
-            
-                <!-- Tambah start -->
-                <div class="col-4 ms-auto mt-5 pt-5 pt-md-0">
-                    <div class="container">
-                    <div class="row row-cols-1">
-                        <div class="input-group ">
+        <div class="container" style="height: 100%;">
+            <div class="row my-5 pt-5" style="height: 100%;">
+                <div class="col mx-auto mt-5 pt-5 pt-md-0">
+                    <div class="input-group ">
                         <span class="input-group-append">
                             <button class="btn btn-outline-muted border-0  ms-ns rounded-pill" type="button" 
-                            data-bs-toggle="collapse" href="#tambahData" role="button" aria-expanded="false" aria-controls="tambahData"
-                            style="background-color: #E9ECEF; color: #333333;" data-bs-target="#tambahData">
+                                data-bs-toggle="collapse" href="#tambahData" role="button" aria-expanded="false" aria-controls="tambahData"
+                                style="background-color: #E9ECEF; color: #333333;" data-bs-target="#tambahData">
                                 <span class="material-symbols-outlined align-text-top">
-                                add_circle
+                                    add_circle
                                 </span>
                                 <span>Tambah Aquarium</span>
                             </button>
                         </span>
-                        </div>
-                        <!-- Tambah end -->
                     </div>
                 </div>
+                <div class="col ms-auto mt-4 pt-5 pt-md-0">
+                    <form action="tambah-aquarium.php" method="POST">
+                        <div class="collapse mt-3" id="tambahData" >
+                            <div class="card card-body border-0 rounded-pill float-end d-flex justify-content-end pe-5 me-5 p-1 " style="background-color: #E9ECEF;">
+                                <div class="row d-flex">
+                                    <div class="col-md-10">
+                                        <input class=" form-control border-end-0 border rounded-pill rounded-pill" type="text" placeholder="Masukkan nama..."  name="nama"> 
+                                    </div>
+                                    <div class="col-md-2">
+                                        <button type="submit" class="btn btn-primary rounded-4 border-0" style="background-color: #2196F3;" name="tambah">Submit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
-
-            <form action="tambah-aquarium.php" method="POST">
-              <div class="collapse mt-3" id="tambahData" >
-                  <div class="card card-body border-0 rounded-pill float-end d-flex justify-content-end pe-5 me-5 p-1 " style="background-color: #E9ECEF;">
-                      <div class="row d-flex">
-                          <div class="col-8">
-                              <input class=" form-control border-end-0 border rounded-pill rounded-pill" type="text" placeholder="Masukkan nama..."  name="nama"> 
-                          </div>
-                          <div class="col-2">
-                              <button type="submit" class="btn btn-primary rounded-4 border-0" style="background-color: #2196F3;" name="tambah">Submit</button>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-            </form>
 
             <div class="load-data"></div>
 
@@ -166,7 +149,7 @@ $result = mysqli_query($db, $query);
       <section id="data">
       </section>
 
-      <footer class="bg-light text-center text-lg-start fixed-bottom">
+      <footer class="bg-light text-center text-lg-start mt-auto">
         <!-- Copyright -->
         <div class="text-center p-3" style="background-color: #2083F4; color: #fff;">
           © 2022 Copyright || Created by Project Mahasiswa || SV IPB
@@ -198,7 +181,7 @@ $result = mysqli_query($db, $query);
   $(document).ready(function(){
     setInterval(function() {
       $('.load-data').load('load-data.php');
-    }, 100);
+    }, 50);
 	
 
   });

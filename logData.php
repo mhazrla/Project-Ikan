@@ -26,9 +26,17 @@ $data = mysqli_fetch_array($resultData);
     <title>Document</title>
     <link rel="stylesheet" href="assets/css/index.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css"/>
+    
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css"/>
+    
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
 
 </head>
-<body style="background-color: #F2F4FF;">
+<body style="background-color: #F2F4FF;" class="d-flex flex-column min-vh-100">
     <div class="screen-cover d-none d-xl-none"></div>
 
     <div class="sidebar-nav">
@@ -115,7 +123,7 @@ $data = mysqli_fetch_array($resultData);
       </section>
 
       <section id="table">
-        <div class="container table-responsive" style="height: 100%;">
+        <div class="container table-responsive mb-5" style="height: 100%;">
             <!-- Table start -->
             <table class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
                 <thead>
@@ -151,7 +159,7 @@ $data = mysqli_fetch_array($resultData);
             <!-- Table end -->
 
             <!-- Pagination start -->
-            <nav aria-label="Page navigation">
+            <!-- <nav aria-label="Page navigation">
                 <div class="pagination flex-wrap justify-content-center align-items-center container">
                     <ul class="row list-unstyled p-3 rounded-4 pages" style="background-color: #FFFFFF; ">
                         <li class="col page-item disabled">
@@ -185,12 +193,12 @@ $data = mysqli_fetch_array($resultData);
                         </li>
                     </ul>
                 </div>
-            </nav>
+            </nav> -->
             <!-- Pagination ends -->
             </div>
       </section>
 
-      <footer class="bg-light text-center text-lg-start fixed-bottom">
+      <footer class="bg-light text-center text-lg-start mt-auto ">
         <!-- Copyright -->
         <div class="text-center p-3" style="background-color: #2083F4; color: #fff;">
           © 2022 Copyright || Created by Project Mahasiswa || SV IPB
@@ -217,6 +225,11 @@ $data = mysqli_fetch_array($resultData);
         e.closest('.sidebar-item').classList.add('active')
 
     }
+
+    $(document).ready(function() {
+        $('table').DataTable();
+    })
+
 </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
