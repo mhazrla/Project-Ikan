@@ -81,8 +81,13 @@ $result = mysqli_query($db, $query);
                             <div class="row">
                               <h6 class="col-10 text-muted"><span class="fw-bold">Status : </span><?=$data["status"];?></h6> 
                               <div class="col">
+                              <?php if($data["status"] == "KUALITAS AIR TERJAGA!") : ?>
                                 <span class="position-absolute p-2 bg-success border border-light rounded-circle">
                                 </span>
+                              <?php elseif($data["status"] == "KUALITAS AIR BURUK, SEGERA GANTI AIR DI AQUASCAPE") : ?>
+                                <span class="position-absolute p-2 bg-danger border border-light rounded-circle">
+                                </span>
+                                <?php endif; ?>
                               </div>
                             </div>
                           </div>
