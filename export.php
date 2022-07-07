@@ -15,12 +15,13 @@ if($result->num_rows > 0){
     $f = fopen('php://memory', 'w'); 
 
     // Set column headers 
-    $fields = array('nama', 'waktu', 'nitrit', 'nitrat', 'amonia', 'status'); 
+    $fields = array('nama', 'waktu', 'PH', 'Suhu', 'Amonia', 'TDS', 'TSS', 'Salinitas', 'Status'); 
     fputcsv($f, $fields, $delimiter); 
 
     //output each row of the data, format line as csv and write to file pointer
     while($row = $result->fetch_assoc()){
-        $lineData = array($row['nama'], $row['waktu'], $row['nitrit'], $row['nitrat'], $row['amonia'], $row['status']);
+        $lineData = array($row['nama'], $row['waktu'], $row['ph'], $row['suhu'], $row['amonia'], 
+                    $row['tds'], $row['tss'], $row['salinitas'],$row['status']);
         fputcsv($f, $lineData, $delimiter);
     }
 

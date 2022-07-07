@@ -53,12 +53,12 @@ $result = mysqli_query($db, $query);
                             <div class="card rounded-5 " style="background-color: #64B5F6;color: #fff;">
                               <div class="card-header bg-transparent border-0">
                                 <div class="d-flex justify-content-center" style="height: 131px;">
-                                  <img src="assets/img/Nitrit.png" class="img-fluid pt-3 mx-auto" alt="Nitrit">
+                                  <img src="assets/img/PH.png" class="img-fluid pt-3 mx-auto" alt="PH">
                                 </div>
                               </div>
                               <div class="card-body text-center">
-                                <h4 class="card-title mb-3">NITRIT</h4>
-                                <h4 class="text-center"><?=$data["nitrit"];?> (mg/L)</h4>
+                                <h4 class="card-title mb-3">PH</h4>
+                                <h4 class="text-center"><?=$data["ph"];?> (mg/L)</h4>
                               </div>
                             </div>
                           </div>
@@ -67,12 +67,12 @@ $result = mysqli_query($db, $query);
                             <div class="card rounded-5 "  style="background-color: #64B5F6;color: #fff;">
                               <div class="card-header bg-transparent border-0">
                                 <div class="d-flex justify-content-center" style="height: 131px;">
-                                  <img src="assets/img/Nitrat.png" class="img-fluid pt-3 mx-auto" alt="Nitrat">
+                                  <img src="assets/img/Suhu.png" class="img-fluid pt-3 mx-auto" alt="Suhu">
                                 </div>
                               </div>
                               <div class="card-body text-center">
-                                <h4 class="card-title mb-3">NITRAT</h4>
-                                <h4 class="text-center"><?=$data["nitrat"];?> (mg/L)</h4>
+                                <h4 class="card-title mb-3">SUHU</h4>
+                                <h4 class="text-center"><?=$data["suhu"];?> (mg/L)</h4>
                               </div>
                             </div>
                           </div>
@@ -95,12 +95,12 @@ $result = mysqli_query($db, $query);
                             <div class="card rounded-5 " style="background-color: #64B5F6;color: #fff;">
                               <div class="card-header bg-transparent border-0">
                                 <div class="d-flex justify-content-center" style="height: 131px;">
-                                  <img src="assets/img/Nitrit.png" class="img-fluid pt-3 mx-auto" alt="Nitrit">
+                                  <img src="assets/img/TDS.png" class="img-fluid pt-3 mx-auto" alt="TDS">
                                 </div>
                               </div>
                               <div class="card-body text-center">
-                                <h4 class="card-title mb-3">NITRIT</h4>
-                                <h4 class="text-center"><?=$data["nitrit"];?> (mg/L)</h4>
+                                <h4 class="card-title mb-3">TDS</h4>
+                                <h4 class="text-center"><?=$data["tds"];?> (mg/L)</h4>
                               </div>
                             </div>
                           </div>
@@ -109,12 +109,12 @@ $result = mysqli_query($db, $query);
                             <div class="card rounded-5 "  style="background-color: #64B5F6;color: #fff;">
                               <div class="card-header bg-transparent border-0">
                                 <div class="d-flex justify-content-center" style="height: 131px;">
-                                  <img src="assets/img/Nitrat.png" class="img-fluid pt-3 mx-auto" alt="Nitrat">
+                                  <img src="assets/img/TSS.png" class="img-fluid pt-3 mx-auto" alt="TSS">
                                 </div>
                               </div>
                               <div class="card-body text-center">
-                                <h4 class="card-title mb-3">NITRAT</h4>
-                                <h4 class="text-center"><?=$data["nitrat"];?> (mg/L)</h4>
+                                <h4 class="card-title mb-3">TSS</h4>
+                                <h4 class="text-center"><?=$data["tss"];?> (mg/L)</h4>
                               </div>
                             </div>
                           </div>
@@ -123,12 +123,12 @@ $result = mysqli_query($db, $query);
                             <div class="card rounded-5 " style="background-color: #64B5F6;color: #fff;">
                               <div class="card-header bg-transparent border-0">
                                 <div class="d-flex justify-content-center" style="height: 131px;">
-                                  <img src="assets/img/Amonia.svg" class="img-fluid pt-3 mx-auto" alt="Amonia">
+                                  <img src="assets/img/Salinitas.svg" class="img-fluid pt-3 mx-auto" alt="Salinitas">
                                 </div>
                               </div>
                               <div class="card-body text-center">
-                                <h4 class="card-title mb-3">AMONIA</h4>
-                                <h4 class="text-center"><?=$data["amonia"];?> (mg/L)</h4>
+                                <h4 class="card-title mb-3">SALINITAS</h4>
+                                <h4 class="text-center"><?=$data["salinitas"];?> (mg/L)</h4>
                               </div>
                             </div>
                           </div>

@@ -130,9 +130,12 @@ $data = mysqli_fetch_array($resultData);
                     <tr>
                         <th scope="col">No</th>
                         <th scope="col">Waktu</th>
-                        <th scope="col">Nitrit</th>
-                        <th scope="col">Nitrat</th>
+                        <th scope="col">PH</th>
+                        <th scope="col">Suhu</th>
                         <th scope="col">Amonia</th>
+                        <th scope="col">TDS</th>
+                        <th scope="col">TSS</th>
+                        <th scope="col">Salinitas</th>
                         <th scope="col">Status</th>
                     </tr>
                 </thead>
@@ -147,9 +150,12 @@ $data = mysqli_fetch_array($resultData);
                         <tr>
                             <th scope="col"><?= $no ?></th>
                             <th scope="col"><?= $data['waktu'] ?></th>
-                            <th scope="col"><?= $data['nitrit'] ?></th>
-                            <th scope="col"><?= $data['nitrat'] ?></th>
+                            <th scope="col"><?= $data['ph'] ?></th>
+                            <th scope="col"><?= $data['suhu'] ?></th>
                             <th scope="col"><?= $data['amonia']?></th>
+                            <th scope="col"><?= $data['tds'] ?></th>
+                            <th scope="col"><?= $data['tss'] ?></th>
+                            <th scope="col"><?= $data['salinitas']?></th>
                             <th scope="col"><?= $data['status']?></th>
                         </tr>
                     <?php } ?>
