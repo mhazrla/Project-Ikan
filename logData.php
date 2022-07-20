@@ -6,7 +6,7 @@ if (isset($_GET['nama'])) {
     $nama = $_GET['nama'];
 }
 
-$queryDashboard =  "SELECT DISTINCT nama FROM logdata";
+$queryDashboard =  "SELECT DISTINCT nama FROM monitoring ORDER BY nama";
 $resultDashboard = mysqli_query($db, $queryDashboard);
 
 // Fetch all data data from logdata table
