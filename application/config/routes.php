@@ -53,7 +53,8 @@ $route['default_controller'] = 'MonitoringController';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
-$route['monitoring'] = 'MonitoringController/index';
+$route['dasboard'] = 'MonitoringController/index';
+$route['monitoring'] = 'MonitoringController/monitoring';
 $route['monitoring/getValue/(:any)/(:any)/(:any)/(:any)/(:any)/(:any)/(:any)'] = 'MonitoringController/getVal/$1/$2/$3/$4/$5/$6/$7';
 $route['monitoring/add'] = 'MonitoringController/add';
 $route['monitoring/delete/(:num)'] = 'MonitoringController/deleteSensors/$1';
