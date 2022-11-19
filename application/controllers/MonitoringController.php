@@ -8,9 +8,9 @@ class MonitoringController extends CI_Controller
 	public function __construct()
 	{
 		parent::__construct();
-		// if (!$this->session->userdata('username')) {
-		//     redirect('auth');
-		// }
+		if (!$this->session->userdata('username')) {
+			redirect('auth');
+		}
 	}
 
 	public function index()
@@ -21,6 +21,7 @@ class MonitoringController extends CI_Controller
 
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/sidebar', $data);
+		$this->load->view('templates/navbar',);
 		$this->load->view('dashboard', $data);
 		$this->load->view('templates/footer');
 	}
@@ -78,6 +79,16 @@ class MonitoringController extends CI_Controller
 		$salinitas = $this->uri->segment(9);
 		$waktu = date('Y-m-d H:i:s');
 
+		if (
+			$amonia >= 26 && $amonia <= 28 and $suhu >= 36 && $suhu <= 38 and
+			$ph >= 46 && $ph <= 48 and $tss >= 56 && $tss <= 58 and
+			$tds >= 66 && $tds <= 68 and $salinitas >= 76 && $salinitas <= 78
+		) {
+			$status = "Good!";
+		} else {
+			$status = "Bad!";
+		}
+
 		$data = [
 			'nama' => $nama,
 			'waktu' => $waktu,
@@ -87,6 +98,7 @@ class MonitoringController extends CI_Controller
 			'tds' => $tds,
 			'tss' => $tss,
 			'salinitas' => $salinitas,
+			'status' => $status
 		];
 		// update data
 		$this->Monitoring_M->updateSensor($data);

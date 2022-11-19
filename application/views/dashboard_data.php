@@ -1,12 +1,12 @@
 	<div class="row">
 
-		<div class="col-xl col-lg">
+		<div class="col-xl col-lg mt-4">
 			<div class="card my-0">
 
 				<!-- Card Body -->
 				<div class="card-body">
 
-					<div class="row align-items-center row-cols-9">
+					<div class="row align-items-center row-cols-3">
 
 						<?php foreach ($sensor as $s) : ?>
 							<div class="col mb-3">

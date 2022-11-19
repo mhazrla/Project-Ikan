@@ -11,7 +11,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 		<div class="sidebar-brand-icon rotate-n-15">
 			<i class="fas fa-solid fa-fish"></i>
 		</div>
-		<div class="sidebar-brand-text mx-3">Project FISH</div>
+		<div class="sidebar-brand-text mx-3">Simonair</div>
 	</a>
 
 	<!-- Divider -->

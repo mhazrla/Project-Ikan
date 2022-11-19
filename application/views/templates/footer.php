@@ -7,7 +7,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 <footer class="sticky-footer bg-white">
 	<div class="container my-auto">
 		<div class="copyright text-center my-auto">
-			<span>© <?= date('Y') ?> Copyright || Created by Project Mahasiswa || SV IPB</span>
+			<span>© <?= date('Y') ?> Copyright || Created by Simonair || SV IPB</span>
 		</div>
 	</div>
 </footer>
