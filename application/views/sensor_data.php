@@ -32,7 +32,7 @@
 								</div>
 								<div class="card-body text-center">
 									<h4 class="card-title mb-3">PH</h4>
-									<h4 class="text-center"><?= $s->ph ?> (mg/L)</h4>
+									<h4 class="text-center"><?= $s->ph ?> pH</h4>
 								</div>
 							</div>
 						</div>
@@ -46,7 +46,7 @@
 								</div>
 								<div class="card-body text-center">
 									<h4 class="card-title mb-3">SUHU</h4>
-									<h4 class="text-center"><?= $s->suhu ?> (mg/L)</h4>
+									<h4 class="text-center"><?= $s->suhu ?> °C</h4>
 								</div>
 							</div>
 						</div>
@@ -60,7 +60,7 @@
 								</div>
 								<div class="card-body text-center">
 									<h4 class="card-title mb-3">AMONIA</h4>
-									<h4 class="text-center"><?= $s->amonia ?> (mg/L)</h4>
+									<h4 class="text-center"><?= $s->amonia ?> g/L</h4>
 								</div>
 							</div>
 						</div>
@@ -74,7 +74,7 @@
 								</div>
 								<div class="card-body text-center">
 									<h4 class="card-title mb-3">TDS</h4>
-									<h4 class="text-center"><?= $s->tds ?> (mg/L)</h4>
+									<h4 class="text-center"><?= $s->tds ?> PPM</h4>
 								</div>
 							</div>
 						</div>
@@ -88,7 +88,7 @@
 								</div>
 								<div class="card-body text-center">
 									<h4 class="card-title mb-3">TSS</h4>
-									<h4 class="text-center"><?= $s->tss ?> (mg/L)</h4>
+									<h4 class="text-center"><?= $s->tss ?> Ntu</h4>
 								</div>
 							</div>
 						</div>
@@ -102,7 +102,7 @@
 								</div>
 								<div class="card-body text-center">
 									<h4 class="card-title mb-3">SALINITAS</h4>
-									<h4 class="text-center"><?= $s->salinitas ?> (mg/L)</h4>
+									<h4 class="text-center"><?= $s->salinitas ?> PPM</h4>
 								</div>
 							</div>
 						</div>
