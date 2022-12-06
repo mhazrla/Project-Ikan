@@ -80,13 +80,13 @@ class MonitoringController extends CI_Controller
 		$waktu = date('Y-m-d H:i:s');
 
 		if (
-			$amonia >= 26 && $amonia <= 28 and $suhu >= 36 && $suhu <= 38 and
-			$ph >= 46 && $ph <= 48 and $tss >= 56 && $tss <= 58 and
-			$tds >= 66 && $tds <= 68 and $salinitas >= 76 && $salinitas <= 78
+			$amonia < 0.1 and $suhu > 27 && $suhu < 29 and
+			$ph > 6.5 && $ph < 7.5 and $tss <= 5 and
+			$tds <= 1000 and $salinitas == 3
 		) {
-			$status = "Good!";
+			$status = "Kualitas air stabil!";
 		} else {
-			$status = "Bad!";
+			$status = "Kualitas air buruk!";
 		}
 
 		$data = [

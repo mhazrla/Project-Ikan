@@ -10,9 +10,9 @@
 				<div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
 					<h6 class="m-0 font-weight-bold text-muted">Update time : <span class="fw-light"><?= $s->waktu ?></span></h6>
 					<h6 class="m-0 font-weight-bold text-muted">Status : <span class="fw-light"><?= $s->status ?></span></h6>
-					<?php if ($s->status === "Good!") : ?>
+					<?php if ($s->status === "Kualitas air baik!") : ?>
 						<span class="p-2 bg-success border border-light rounded-circle"></span>
-					<?php elseif ($s->status === "Bad!") : ?>
+					<?php elseif ($s->status === "Kualitas air buruk!") : ?>
 						<span class=" p-2 bg-danger border border-light rounded-circle"></span>
 					<?php endif; ?>
 				</div>
@@ -24,7 +24,7 @@
 					<div class="row align-items-center row-cols-3">
 
 						<div class="col mb-3">
-							<div class="card rounded-5 <?php if ($s->ph > 0) echo 'bg-danger' ?>" style="background-color: #64B5F6;color: #fff;">
+							<div class="card rounded-5 <?php if ($s->ph > 7.5 || $s->ph < 6.5) echo 'bg-danger' ?>" style="background-color: #64B5F6;color: #fff;">
 								<div class="card-header bg-transparent border-0">
 									<div class="d-flex justify-content-center" style="height: 131px;">
 										<img src="<?= base_url() ?>assets/img/PH.png" class="img-fluid pt-3 mx-auto" alt="PH">
@@ -38,7 +38,7 @@
 						</div>
 
 						<div class="col mb-3">
-							<div class="card rounded-5 " style="background-color: #64B5F6;color: #fff;">
+							<div class="card rounded-5 <?php if ($s->suhu > 29 || $s->suhu < 27) echo 'bg-danger' ?>" style="background-color: #64B5F6;color: #fff;">
 								<div class="card-header bg-transparent border-0">
 									<div class="d-flex justify-content-center" style="height: 131px;">
 										<img src="<?= base_url() ?>assets/img/Temperature.png" class="img-fluid pt-3 mx-auto" alt="Suhu">
@@ -52,7 +52,7 @@
 						</div>
 
 						<div class="col mb-3">
-							<div class="card rounded-5 " style="background-color: #64B5F6;color: #fff;">
+							<div class="card rounded-5 <?php if ($s->amonia > 0.1) echo 'bg-danger' ?>" style="background-color: #64B5F6;color: #fff;">
 								<div class="card-header bg-transparent border-0">
 									<div class="d-flex justify-content-center" style="height: 131px;">
 										<img src="<?= base_url() ?>assets/img/Amonia.svg" class="img-fluid pt-3 mx-auto" alt="Amonia">
@@ -66,7 +66,7 @@
 						</div>
 
 						<div class="col mb-3">
-							<div class="card rounded-5 " style="background-color: #64B5F6;color: #fff;">
+							<div class="card rounded-5 <?php if ($s->tds > 1000) echo 'bg-danger' ?>" style="background-color: #64B5F6;color: #fff;">
 								<div class="card-header bg-transparent border-0">
 									<div class="d-flex justify-content-center" style="height: 131px;">
 										<img src="<?= base_url() ?>assets/img/tds.png" class="img-fluid pt-3 mx-auto" alt="TDS">
@@ -80,7 +80,7 @@
 						</div>
 
 						<div class="col mb-3">
-							<div class="card rounded-5 " style="background-color: #64B5F6;color: #fff;">
+							<div class="card rounded-5 <?php if ($s->tss > 5) echo 'bg-danger' ?>" style="background-color: #64B5F6;color: #fff;">
 								<div class="card-header bg-transparent border-0">
 									<div class="d-flex justify-content-center" style="height: 131px;">
 										<img src="<?= base_url() ?>assets/img/TSS.png" class="img-fluid pt-3 mx-auto" alt="TSS">
@@ -94,7 +94,7 @@
 						</div>
 
 						<div class="col mb-3">
-							<div class="card rounded-5 " style="background-color: #64B5F6;color: #fff;">
+							<div class="card rounded-5 <?php if ($s->salinitas !== 3) echo 'bg-danger' ?>" style="background-color: #64B5F6;color: #fff;">
 								<div class="card-header bg-transparent border-0">
 									<div class="d-flex justify-content-center" style="height: 131px;">
 										<img src="<?= base_url() ?>assets/img/salinitas.png" class="img-fluid pt-3 mx-auto" alt="Salinitas">
