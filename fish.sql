@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 23, 2022 at 08:02 AM
+-- Generation Time: Dec 09, 2022 at 04:07 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -20,26 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `fish`
 --
-
--- --------------------------------------------------------
-
---
--- Table structure for table `average`
---
-
-CREATE TABLE `average` (
-  `id` int(11) NOT NULL,
-  `id_alat` int(11) NOT NULL,
-  `nama` varchar(100) NOT NULL,
-  `waktu` varchar(100) NOT NULL DEFAULT current_timestamp(),
-  `ph` double NOT NULL,
-  `suhu` double NOT NULL,
-  `amonia` double NOT NULL,
-  `tds` double NOT NULL,
-  `tss` double NOT NULL,
-  `salinitas` double NOT NULL,
-  `status` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -759,7 +739,13 @@ INSERT INTO `logdata` (`id_alat`, `nama`, `waktu`, `ph`, `suhu`, `amonia`, `tds`
 (16, 'a', '2022-08-08 15:28:24', '5.00', '6.00', '7.00', '8.00', '9.00', '9.00', 'undefined'),
 (16, 'a', '2022-08-11 10:07:45', '35.00', '43.00', '42.00', '2.00', '234.00', '3.00', 'undefined'),
 (16, 'a', '2022-08-11 10:08:01', '343.00', '462.00', '42.00', '2.00', '233.00', '2.00', 'undefined'),
-(17, 'b', '2022-08-21 11:58:51', '1.00', '2.00', '3.00', '4.00', '5.00', '6.00', 'undefined');
+(17, 'b', '2022-08-21 11:58:51', '1.00', '2.00', '3.00', '4.00', '5.00', '6.00', 'undefined'),
+(17, 'b', '2022-11-19 13:31:28', '2.00', '3.00', '4.00', '2.00', '3.00', '4.00', 'Bad!'),
+(19, 'c', '2022-11-19 13:33:11', '27.00', '3.00', '4.00', '2.00', '3.00', '4.00', 'Bad!'),
+(19, 'c', '2022-11-19 13:33:43', '27.00', '3.00', '4.00', '47.00', '3.00', '4.00', 'Bad!'),
+(19, 'c', '2022-11-19 13:33:59', '47.00', '3.00', '4.00', '47.00', '3.00', '4.00', 'Good!'),
+(30, 'Aquarium1', '2022-11-19 14:41:42', '12.00', '23.00', '34.00', '45.00', '56.00', '67.00', 'Bad!'),
+(30, 'Aquarium1', '2022-11-19 14:42:59', '12.00', '23.00', '34.00', '45.00', '56.00', '67.00', 'Bad!');
 
 -- --------------------------------------------------------
 
@@ -785,8 +771,18 @@ CREATE TABLE `monitoring` (
 --
 
 INSERT INTO `monitoring` (`id`, `nama`, `waktu`, `ph`, `suhu`, `amonia`, `tds`, `tss`, `salinitas`, `status`) VALUES
-(17, 'b', '2022-08-21 11:58:51', '1.00', '2.00', '3.00', '4.00', '5.00', '6.00', 'undefined'),
-(19, 'c', '2022-08-21 11:07:02', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 'undefined');
+(30, 'Aquarium1', '2022-11-19 14:42:59', '12.00', '23.00', '34.00', '45.00', '56.00', '67.00', 'Kualitas air buruk!'),
+(31, 'Aquarium2', '2022-11-19 14:39:56', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 'undefined'),
+(32, 'Aquarium3', '2022-11-19 14:40:00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 'undefined'),
+(33, 'Aquarium4', '2022-11-19 14:40:04', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 'undefined'),
+(34, 'Aquarium5', '2022-11-19 14:40:09', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 'undefined'),
+(35, 'Aquarium6', '2022-11-19 14:40:13', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 'undefined'),
+(36, 'Aquarium7', '2022-11-19 14:40:17', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 'undefined'),
+(37, 'Aquarium8', '2022-11-19 14:40:22', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 'undefined'),
+(38, 'Aquarium9', '2022-11-19 14:40:27', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 'undefined'),
+(39, 'Aquarium10', '2022-11-19 14:40:31', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 'undefined'),
+(40, 'Aquarium11', '2022-11-19 14:40:36', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 'undefined'),
+(41, 'Aquarium12', '2022-11-19 14:40:41', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', 'undefined');
 
 -- --------------------------------------------------------
 
@@ -809,11 +805,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `username`, `password`, `role_id`, `is_active`, `date_created`) VALUES
-(7, 'user', 'user', '$2y$10$EbSPrJlOS4IlPU3RDGY4eevdRf9Q2WKSXgkJb0ytl8gxFo6.rpeqa', 2, 1, 1659927983),
-(8, 'admin', 'admin', '$2y$10$Np40pr16vUPUtFA/o1k8ieF2WybBAuGPKovDgCEvyCEUWcOjy/9xe', 1, 1, 1659927992),
-(9, 'aa', 'aa', '$2y$10$MS9o6zf3cVa6bdVi/Z9Uxunmjr8DANMoLU6V6I0mJVB7RWplCeP3S', 1, 1, 1660186817),
-(10, 'id', '11', '$2y$10$NwbvzCrtf77TlixMHrlZvO9Oy6xS.IBcgzDmoK7Ftowvj8tbmedF.', 2, 1, 1660987044),
-(11, 'aa', 'ga', '$2y$10$5ipInrtqZ8bveFyHTx0P.eWwWXmjMZZ9oKzq3d0p1jOjtjqMTV5Ue', 2, 1, 1660991583);
+(14, 'Admin', 'admin', '$2y$10$japCEsr3m2MSseOjxIRkvuIcZtTrKAqTkjsW1y2NftPjhsgGvYoFq', 2, 1, 1670322785);
 
 -- --------------------------------------------------------
 
@@ -839,12 +831,6 @@ INSERT INTO `user_role` (`id`, `role`) VALUES
 --
 
 --
--- Indexes for table `average`
---
-ALTER TABLE `average`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indexes for table `logdata`
 --
 ALTER TABLE `logdata`
@@ -860,7 +846,8 @@ ALTER TABLE `monitoring`
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `role_id` (`role_id`);
 
 --
 -- Indexes for table `user_role`
@@ -873,28 +860,32 @@ ALTER TABLE `user_role`
 --
 
 --
--- AUTO_INCREMENT for table `average`
---
-ALTER TABLE `average`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT for table `monitoring`
 --
 ALTER TABLE `monitoring`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `user_role`
 --
 ALTER TABLE `user_role`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `users`
+--
+ALTER TABLE `users`
+  ADD CONSTRAINT `users_ibfk_1` FOREIGN KEY (`role_id`) REFERENCES `user_role` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
