@@ -5,16 +5,20 @@ defined('BASEPATH') or exit('No direct script access allowed');
 class MonitoringController extends CI_Controller
 {
 
-	public function __construct()
-	{
-		parent::__construct();
-		if (!$this->session->userdata('username')) {
-			redirect('auth');
-		}
-	}
+	// public function __construct()
+	// {
+	// 	parent::__construct();
+	// 	if (!$this->session->userdata('username')) {
+	// 		redirect('auth');
+	// 	}
+	// }
 
 	public function index()
 	{
+		if (!$this->session->userdata('username')) {
+			redirect('auth');
+		}
+
 		$data['title'] = 'Dashboard';
 		$data['user'] = $this->db->get_where('users', ['username' => $this->session->userdata('username')])->row_array();
 		$data['sensor'] = $this->Monitoring_M->getSensor()->result();
@@ -28,6 +32,10 @@ class MonitoringController extends CI_Controller
 
 	public function monitoring()
 	{
+		if (!$this->session->userdata('username')) {
+			redirect('auth');
+		}
+
 		$data['title'] = 'Monitoring';
 		$data['user'] = $this->db->get_where('users', ['username' => $this->session->userdata('username')])->row_array();
 		$data['sensor'] = $this->Monitoring_M->getSensor()->result();
@@ -41,6 +49,10 @@ class MonitoringController extends CI_Controller
 
 	public function add()
 	{
+		if (!$this->session->userdata('username')) {
+			redirect('auth');
+		}
+
 		$this->form_validation->set_rules('nama', 'Nama Alat', 'trim|required', ['required' => 'Nama alat harus diisi']);
 
 		if ($this->form_validation->run()) {
@@ -53,6 +65,10 @@ class MonitoringController extends CI_Controller
 
 	public function sensorVal()
 	{
+		if (!$this->session->userdata('username')) {
+			redirect('auth');
+		}
+
 		$data['sensor'] = $this->Monitoring_M->getSensor()->result();
 
 		$this->load->view('sensor_data', $data);
@@ -107,6 +123,10 @@ class MonitoringController extends CI_Controller
 
 	public function detail($id)
 	{
+		if (!$this->session->userdata('username')) {
+			redirect('auth');
+		}
+
 		$data['user'] = $this->db->get_where('users', ['username' => $this->session->userdata('username')])->row_array();
 		$data['title'] = 'Log Data';
 		$data['sensor'] = $this->Monitoring_M->getSensor()->result();
@@ -121,18 +141,30 @@ class MonitoringController extends CI_Controller
 
 	public function deleteSensors($id)
 	{
+		if (!$this->session->userdata('username')) {
+			redirect('auth');
+		}
+
 		$this->Monitoring_M->deleteSensor($id);
 		redirect();
 	}
 
 	public function deleteLogdata($id)
 	{
+		if (!$this->session->userdata('username')) {
+			redirect('auth');
+		}
+
 		$this->Monitoring_M->deleteLog($id);
 		redirect();
 	}
 
 	public function export($id)
 	{
+		if (!$this->session->userdata('username')) {
+			redirect('auth');
+		}
+
 		$file_name = 'logdata_' . $id . "_" . date('Y-m-d') . '.csv';
 		header("Content-Description: File Transfer");
 		header("Content-Disposition: attachment; filename=$file_name");
