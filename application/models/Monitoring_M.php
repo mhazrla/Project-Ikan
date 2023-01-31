@@ -13,11 +13,13 @@ class Monitoring_M extends CI_Model
 
 	public function getDetail($id)
 	{
-		$query = 'SELECT *,
-                        COUNT(*) 
-                        FROM logdata WHERE id_alat=?
-                        GROUP BY HOUR(waktu), MINUTE(waktu)
-                        ORDER BY HOUR(waktu) DESC, MINUTE(waktu) ASC';
+		$query = "SELECT *, HOUR(waktu) as hour FROM `logdata` WHERE id_alat=? GROUP BY HOUR(waktu)
+					ORDER BY HOUR(waktu) ASC";
+		// $query = 'SELECT *,
+		//                 COUNT(*) 
+		//                 FROM logdata WHERE id_alat=?
+		//                 GROUP BY HOUR(waktu), MINUTE(waktu)
+		//                 ORDER BY HOUR(waktu) DESC, MINUTE(waktu) ASC';
 		return $this->db->query($query, $id);
 	}
 
