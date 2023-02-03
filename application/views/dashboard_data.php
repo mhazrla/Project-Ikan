@@ -23,7 +23,7 @@
 												</thead>
 												<tbody>
 													<tr>
-														<th scope="row">PH</th>
+														<th scope="row">pH</th>
 														<td>
 															<?= $s->ph ?>
 														</td>

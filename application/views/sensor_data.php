@@ -31,7 +31,7 @@
 									</div>
 								</div>
 								<div class="card-body text-center">
-									<h4 class="card-title mb-3">PH</h4>
+									<h4 class="card-title mb-3">pH</h4>
 									<h4 class="text-center"><?= $s->ph ?> pH</h4>
 								</div>
 							</div>

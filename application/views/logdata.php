@@ -31,7 +31,7 @@
 				<tr>
 					<th scope="col">No</th>
 					<th scope="col">Waktu</th>
-					<th scope="col">PH</th>
+					<th scope="col">pH</th>
 					<th scope="col">Suhu</th>
 					<th scope="col">Amonia</th>
 					<th scope="col">TDS</th>
